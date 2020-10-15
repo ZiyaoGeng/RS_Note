@@ -1,0 +1,408 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>WDL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Match
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    A1
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    A2
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    CTR
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="WDL.html">
+            
+                <a href="WDL.html">
+            
+                    
+                    WDL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >WDL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><img src="../images/ctr_1.png" style="zoom:80%;"></p>
+<p>&#x672C;&#x6587;&#x662F;2016&#x5E74;&#x8C37;&#x6B4C;&#x63D0;&#x51FA;&#x7684;Wide&amp;Deep&#x6A21;&#x578B;&#x3002;&#x5982;&#x5176;&#x8BF4;&#x8C37;&#x6B4C;&#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x4E0D;&#x5982;&#x8BF4;&#x662F;&#x7ED9;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x4E0E;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x7ED3;&#x5408;&#x5171;&#x540C;&#x5B66;&#x4E60;&#x7684;&#x67B6;&#x6784;&#xFF0C;&#x4E3A;&#x540E;&#x6765;&#x7684;&#x6DF7;&#x5408;&#x6A21;&#x578B;&#x629B;&#x7816;&#x5F15;&#x7389;&#x3002;&#x56E0;&#x6B64;WIde&amp;Deep&#x6A21;&#x578B;&#x5728;&#x5DE5;&#x4E1A;&#x754C;&#x53D1;&#x6325;&#x7740;&#x5DE8;&#x5927;&#x7684;&#x5F71;&#x54CD;&#x529B;&#x3002;&#x8BE5;&#x6A21;&#x578B;&#x4E3B;&#x8981;&#x7531;&#x4E24;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF1A;</p>
+<ol>
+<li>Wide&#x90E8;&#x5206;&#xFF1A;&#x901A;&#x8FC7;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x6765;&#x5904;&#x7406;&#x5927;&#x91CF;&#x5386;&#x53F2;&#x7684;&#x884C;&#x4E3A;&#x7279;&#x5F81;&#xFF0C;&#x4F7F;&#x6A21;&#x578B;&#x5177;&#x6709;&#x201C;&#x8BB0;&#x5FC6;&#x80FD;&#x529B;&#x201D;&#x3002;&#x4F46;&#x5176;&#x901A;&#x5E38;&#x4F9D;&#x8D56;&#x4E8E;&#x66F4;&#x591A;&#x7684;&#x7279;&#x5F81;&#x5DE5;&#x7A0B;&#x3002;</li>
+<li>Deep&#x90E8;&#x5206;&#xFF1A;&#x901A;&#x8FC7;&#x5BF9;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x7684;embedding&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#xFF0C;&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x8F83;&#x597D;&#x5730;&#x63A8;&#x5E7F;&#x5230;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x6DF1;&#x5EA6;&#x7279;&#x5F81;&#x7EC4;&#x5408;&#xFF0C;&#x8BA9;&#x6A21;&#x578B;&#x5177;&#x6709;&#x201C;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x201D;&#x3002;&#x4F46;&#x5982;&#x679C;&#x6570;&#x636E;&#x8FC7;&#x4E8E;&#x7A00;&#x758F;&#xFF0C;&#x90A3;&#x4E48;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4F1A;&#x8FC7;&#x5EA6;&#x6CDB;&#x5316;&#xFF0C;&#x5373;&#x8FC7;&#x62DF;&#x5408;&#x3002;</li>
+</ol>
+<p>Wide&amp;Deep&#x6A21;&#x578B;&#x7ED3;&#x5408;Wide&#x548C;Deep&#x7684;&#x4F18;&#x52BF;&#xFF0C;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x5904;&#x7406;&#x5E76;&#x8BB0;&#x5FC6;&#x5927;&#x91CF;&#x5386;&#x53F2;&#x884C;&#x4E3A;&#x7279;&#x5F81;&#xFF0C;&#x5E76;&#x4E14;&#x5177;&#x6709;&#x5F3A;&#x5927;&#x7684;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x3002;</p>
+<p>&#x6709;&#x5173;&#x8BE5;&#x6A21;&#x578B;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x5BF9;&#x6587;&#x4E2D;&#x63D0;&#x5230;&#x201C;&#x8BB0;&#x5FC6;&#x80FD;&#x529B;&#x201D;&#x548C;&#x201C;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x201D;&#x8FDB;&#x884C;&#x89E3;&#x91CA;&#x3002;</p>
+<h2 id="memorization&#x4E0E;generalization">Memorization&#x4E0E;Generalization</h2>
+<p>&#x6587;&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x63A8;&#x8350;&#x7CFB;&#x7EDF;&#x7684;&#x6311;&#x6218;&#x4E4B;&#x4E00;&#x5C31;&#x662F;&#x8BA9;&#x6A21;&#x578B;&#x540C;&#x65F6;&#x62E5;&#x6709;&#x8F83;&#x5F3A;&#x7684;&#x201C;&#x8BB0;&#x5FC6;&#x80FD;&#x529B;&#x201D;&#x548C;&#x201C;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x201D;&#x3002;&#x5BF9;&#x4E8E;&#x201C;&#x8BB0;&#x5FC6;&#x201D;&#xFF08;memorization&#xFF09;&#x548C;&#x201C;&#x6CDB;&#x5316;&#x201D;&#xFF08;generalization&#xFF09;&#xFF0C;&#x539F;&#x6587;&#x4E2D;&#x7684;&#x63CF;&#x8FF0;&#x662F;&#xFF1A;</p>
+<blockquote>
+<p>Memorization can be loosely de&#xFB01;ned as learning the frequent co-occurrence of items or features and exploiting the correlation available in the historical data. Generalization, on the other hand, is based on transitivity of correlation and explores new feature combinations that have never or rarely occurred in the past.</p>
+</blockquote>
+<p>&#x7FFB;&#x8BD1;&#x4E00;&#x4E0B;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li><strong>&#x8BB0;&#x5FC6;&#x80FD;&#x529B;&#xFF1A;</strong>&#x6A21;&#x578B;&#x76F4;&#x63A5;&#x5B66;&#x4E60;&#x5E76;&#x5229;&#x7528;&#xFF08;<strong>exploiting</strong>&#xFF09;&#x5386;&#x53F2;&#x6570;&#x636E;&#x4E2D;&#x7269;&#x54C1;&#x6216;&#x7279;&#x5F81;&#x201C;&#x8D21;&#x732E;&#x9891;&#x7387;&#x201D;&#x7684;&#x80FD;&#x529B;&#x3002;</li>
+<li><strong>&#x6CDB;&#x5316;&#x80FD;&#x529B;&#xFF1A;</strong>&#x57FA;&#x4E8E;&#x7279;&#x5F81;&#x4F20;&#x9012;&#x7684;&#x76F8;&#x5173;&#x6027;&#xFF0C;&#x63A2;&#x7D22;&#xFF08;<strong>exploring</strong>&#xFF09;&#x8FC7;&#x53BB;&#x4ECE;&#x672A;&#x6216;&#x5F88;&#x5C11;&#x53D1;&#x751F;&#x7684;&#x65B0;&#x7279;&#x5F81;&#x7EC4;&#x5408;&#x3002;</li>
+</ul>
+<p><strong>&#x300C;&#x57FA;&#x4E8E;&#x8BB0;&#x5FC6;&#x7684;&#x63A8;&#x8350;&#x300D;</strong>&#x662F;&#x6307;&#x76F4;&#x63A5;&#x5B66;&#x4E60;&#x5E76;&#x5229;&#x7528;&#x5386;&#x53F2;&#x6570;&#x636E;&#x4E2D;&#x7269;&#x54C1;&#x6216;&#x8005;&#x7279;&#x5F81;&#x7684;&#x201C;&#x5171;&#x73B0;&#x9891;&#x7387;&#x201D;&#x7684;&#x80FD;&#x529B;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x4F8B;&#x5982;&#x5E38;&#x89C1;&#x7684;&#x534F;&#x540C;&#x8FC7;&#x6EE4;&#x3001;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x90FD;&#x662F;&#x5177;&#x6709;&#x8F83;&#x5F3A;&#x7684;&#x201C;&#x8BB0;&#x5FC6;&#x80FD;&#x529B;&#x201D;&#xFF0C;&#x539F;&#x59CB;&#x6570;&#x636E;&#x5F80;&#x5F80;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F71;&#x54CD;&#x63A8;&#x8350;&#x7ED3;&#x679C;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x201C;&#x5982;&#x679C;&#x70B9;&#x51FB;A&#xFF0C;&#x5C31;&#x63A8;&#x8350;B&#x201D;&#x7684;&#x89C4;&#x5219;&#x5F0F;&#x63A8;&#x8350;&#x3002;<strong>&#x300C;&#x57FA;&#x4E8E;&#x6CDB;&#x5316;&#x7684;&#x63A8;&#x8350;&#x300D;</strong>&#x662F;&#x6A21;&#x578B;&#x4F20;&#x9012;&#x7279;&#x5F81;&#x7684;&#x76F8;&#x5173;&#x6027;&#x8FDB;&#x884C;&#x63A8;&#x8350;&#x3002;&#x5BF9;&#x4E8E;&#x4F20;&#x7EDF;&#x7684;&#x534F;&#x540C;&#x8FC7;&#x6EE4;&#x5B58;&#x5728;&#x7740;&#x7F3A;&#x9677;&#xFF0C;&#x5904;&#x7406;&#x7A00;&#x758F;&#x5411;&#x91CF;&#x80FD;&#x529B;&#x5F31;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#xFF0C;&#x77E9;&#x9635;&#x5206;&#x89E3;&#x88AB;&#x63D0;&#x51FA;&#xFF0C;&#x6765;&#x589E;&#x5F3A;&#x6A21;&#x578B;&#x7684;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x3002;&#x77E9;&#x9635;&#x5206;&#x89E3;&#x5F15;&#x5165;&#x4E86;&#x9690;&#x5411;&#x91CF;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x6570;&#x636E;&#x7A00;&#x5C11;&#x7684;&#x7528;&#x6237;&#x6216;&#x7269;&#x54C1;&#x4E5F;&#x80FD;&#x751F;&#x6210;&#x9690;&#x5411;&#x91CF;&#xFF0C;&#x4ECE;&#x800C;&#x83B7;&#x5F97;&#x6709;&#x6570;&#x636E;&#x652F;&#x6491;&#x7684;&#x63A8;&#x8350;&#x5F97;&#x5206;&#x3002;&#x5BF9;&#x4E8E;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#xFF0C;&#x901A;&#x8FC7;&#x5BF9;&#x7279;&#x5F81;&#x7684;&#x81EA;&#x52A8;&#x7EC4;&#x5408;&#xFF0C;&#x6316;&#x6398;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6F5C;&#x5728;&#x6A21;&#x5F0F;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x6A21;&#x578B;&#x7684;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x3002;</p>
+<p><strong>&#x8BA8;&#x8BBA;1&#xFF1A;</strong>&#x4E0A;&#x9762;&#x5173;&#x4E8E;&#x8BB0;&#x5FC6;&#x4E0E;&#x6CDB;&#x5316;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#xFF0C;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x4E0E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x5C11;&#xFF0C;&#x800C;&#x6D41;&#x91CF;&#x3010;&#x5373;&#x7528;&#x6237;&#x4E0E;&#x7269;&#x54C1;&#x4EA4;&#x4E92;&#x3011;&#x8FC7;&#x591A;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x90A3;&#x4E48;&#x57FA;&#x4E8E;&#x8BB0;&#x5FC6;&#x7684;&#x63A8;&#x8350;&#x7684;&#x6027;&#x80FD;&#x4E0D;&#x900A;&#x4E8E;&#x57FA;&#x4E8E;&#x6CDB;&#x5316;&#x7684;&#x63A8;&#x8350;&#xFF1F;&#x5728;&#x63A8;&#x8350;&#x7CBE;&#x5EA6;&#x76F8;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7B80;&#x5355;&#x7684;&#x63A8;&#x8350;&#x6A21;&#x578B;&#x6BD4;&#x590D;&#x6742;&#x7684;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x6548;&#x7387;&#x66F4;&#x9AD8;&#xFF0C;&#x56E0;&#x6B64;&#x9009;&#x62E9;&#x4F20;&#x7EDF;&#x6A21;&#x578B;&#x5E94;&#x8BE5;&#x4F1A;&#x66F4;&#x9002;&#x5408;&#xFF0C;&#x4E5F;&#x5C31;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x7B26;&#x5408;&#x4E86;&#x5965;&#x5361;&#x59C6;&#x5243;&#x5200;&#x539F;&#x5219;&#x3002;</p>
+<h2 id="wide--deep">Wide &amp; Deep</h2>
+<p><img src="../images/ctr_2.png" style="zoom:50%;"></p>
+<h3 id="wide-component">Wide Component</h3>
+<p>Wide&#x90E8;&#x5206;&#x5584;&#x4E8E;&#x5904;&#x7406;&#x7A00;&#x758F;&#x7C7B;&#x7684;&#x7279;&#x5F81;&#x3002;&#x8BE5;&#x90E8;&#x5206;&#x901A;&#x5E38;&#x662F;&#x7531;&#x4E00;&#x4E2A;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x6784;&#x6210;(&#x5982;&#x56FE;1&#x5DE6;&#xFF09;&#xFF1A;</p>
+<p>$$
+y=\mathbf{w}^T\mathbf{x}+b</p>
+<p>$$</p>
+<p>&#x5176;&#x4E2D;&#x7279;&#x5F81;$$\mathbf{x}=[x_1, x_2,...,x_d]$$&#x7531;&#x539F;&#x751F;&#x8F93;&#x5165;&#x7279;&#x5F81;&#x548C;&#x7279;&#x5F81;&#x53D8;&#x6362;&#x6784;&#x6210;&#xFF08;&#x7279;&#x5F81;&#x5DE5;&#x7A0B;&#xFF09;&#x3002;</p>
+<h4 id="cross-product-transformation">cross-product transformation</h4>
+<p>&#x5176;&#x4E2D;&#x6587;&#x4E2D;&#x63D0;&#x5230;&#x8FC7;&#x7684;&#x7279;&#x5F81;&#x53D8;&#x6362;&#x4E3A;&#x4EA4;&#x53C9;&#x4E58;&#x79EF;&#x53D8;&#x6362;&#xFF08;cross-product transformation&#xFF09;&#xFF1A;</p>
+<p>$$
+\phi<em>k(\mathbf{x})=\prod</em>{i=1}^dx<em>i^{c</em>{ki}}\ \ \ \ c_{ki}  \in {0,1}</p>
+<p>$$</p>
+<p>$$c<em>{ki}$$&#x662F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x53D8;&#x91CF;&#xFF0C;&#x5F53;&#x7B2C;$$i$$&#x4E2A;&#x7279;&#x5F81;&#x5C5E;&#x4E8E;&#x7B2C;$$k$$&#x4E2A;&#x7279;&#x5F81;&#x7EC4;&#x5408;$$\phi_k$$&#x65F6;&#xFF0C;$$c</em>{ki}$$&#x503C;&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x6587;&#x4E2D;&#x63D0;&#x5230;&#x5BF9;&#x4E8E;&#x7279;&#x5F81;&#x7EC4;&#x5408;&quot;AND(gender=female, language=en)&quot;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x5E94;&#x7684;&#x7279;&#x5F81;&#x201C;gender=female&#x201D; &#x548C;&#x201C;language=en&#x201D;&#x90FD;&#x7B26;&#x5408;&#xFF0C;&#x5219;&#x5BF9;&#x5E94;&#x7684;&#x4EA4;&#x53C9;&#x79EF;&#x53D8;&#x6362;&#x5C42;&#x7ED3;&#x679C;&#x624D;&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0&#x3002;</p>
+<p><strong>&#x4F5C;&#x7528;&#xFF1A;</strong>&#x8FD9;&#x80FD;&#x6355;&#x83B7;&#x4E24;&#x4E2A;&#x4E8C;&#x5143;&#x7279;&#x5F81;&#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;&#xFF0C;&#x5E76;&#x4E3A;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x6DFB;&#x52A0;&#x975E;&#x7EBF;&#x6027;&#x3002;</p>
+<h3 id="deep-component">Deep Component</h3>
+<p>&#x8BE5;&#x90E8;&#x5206;&#x4E3B;&#x8981;&#x662F;&#x4E00;&#x4E2A;Embedding+MLP&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6A21;&#x578B;&#xFF08;&#x5982;&#x56FE;1&#x53F3;&#xFF09;&#x3002;&#x5927;&#x89C4;&#x6A21;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x901A;&#x8FC7;embedding&#x8F6C;&#x5316;&#x4E3A;&#x4F4E;&#x7EF4;&#x5BC6;&#x96C6;&#x578B;&#x7279;&#x5F81;&#x3002;&#x7136;&#x540E;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x62FC;&#x63A5;&#x8F93;&#x5165;&#x5230;MLP&#x4E2D;&#xFF0C;&#x6316;&#x6398;&#x85CF;&#x5728;&#x7279;&#x5F81;&#x80CC;&#x540E;&#x7684;&#x6570;&#x636E;&#x6A21;&#x5F0F;&#x3002;</p>
+<h3 id="joint-wide-and-deep">Joint Wide and Deep</h3>
+<p>Wide&#x90E8;&#x5206;&#x548C;Deep&#x90E8;&#x5206;&#x7684;&#x8F93;&#x51FA;&#x8FDB;&#x884C;&#x52A0;&#x6743;&#x6C42;&#x548C;&#x4F5C;&#x4E3A;&#x6700;&#x540E;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x6A21;&#x578B;&#x7684;&#x6700;&#x7EC8;&#x9884;&#x6D4B;&#x4E3A;&#xFF1A;</p>
+<p>$$
+P(Y=1 \mid \mathbf{x})=\sigma\left(\mathbf{w}<em>{w i d e}^{T}[\mathbf{x}, \phi(\mathbf{x})]+\mathbf{w}</em>{d e e p}^{T} a^{\left(l_{f}\right)}+b\right)</p>
+<p>$$
+&#x5176;&#x4E2D;$$\sigma(\cdot)$$&#x4E3A;sigmoid&#x51FD;&#x6570;&#xFF0C;$$\mathbf{w}<em>{wide},\mathbf{w}</em>{deep}$$&#x5206;&#x522B;&#x662F;Wide&#x90E8;&#x5206;&#x548C;Deep&#x90E8;&#x5206;&#x7684;&#x6743;&#x91CD;&#x3002;</p>
+<p><strong>&#x8BA8;&#x8BBA;2&#xFF1A;</strong>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x6587;&#x4E2D;Wide&#x90E8;&#x5206;&#x548C;Deep&#x90E8;&#x5206;&#x7684;&#x4F18;&#x5316;&#x5668;&#x4E0D;&#x76F8;&#x540C;&#x3002;Wide&#x90E8;&#x5206;&#x91C7;&#x7528;&#x57FA;&#x4E8E;L1&#x6B63;&#x5219;&#x7684;TTRL&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF0C;Deep&#x90E8;&#x5206;&#x91C7;&#x7528;AdaGrad&#x7684;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x3002;&#x53C2;&#x8003;[1]&#xFF0C;<strong>FTRL with L1&#x975E;&#x5E38;&#x6CE8;&#x91CD;&#x6A21;&#x578B;&#x7684;&#x7A00;&#x758F;&#x6027;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;<strong>W&amp;D&#x662F;&#x60F3;&#x8BA9;Wide&#x90E8;&#x5206;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x7A00;&#x758F;&#x3002;</strong>&#x6B64;&#x5904;&#x4F5C;&#x8005;&#x91C7;&#x7528;FTRL&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#x5E94;&#x8BE5;&#x8003;&#x8651;&#x4E86;&#x6A21;&#x578B;&#x5B9E;&#x9645;&#x7684;&#x5E94;&#x7528;&#x80CC;&#x666F;&#xFF0C;&#x82E5;&#x5BF9;&#x4E8E;&#x666E;&#x901A;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x5B9E;&#x9A8C;&#x3010;&#x4E00;&#x4E9B;&#x516C;&#x5171;&#x6570;&#x636E;&#x96C6;&#x4E0A;&#x3011;&#xFF0C;&#x662F;&#x5426;&#x6709;&#x5FC5;&#x8981;&#x91C7;&#x7528;&#x4E24;&#x4E2A;&#x4F18;&#x5316;&#x7B97;&#x6CD5;&#xFF1F;&#x770B;&#x8FC7;&#x4E00;&#x4E9B;&#x590D;&#x73B0;&#x4EE3;&#x7801;&#xFF0C;&#x76F4;&#x63A5;&#x91C7;&#x7528;&#x4E86;&#x5355;&#x4E2A;&#x4F18;&#x5316;&#x5668;&#x3002;</p>
+<h2 id="google-pay-recommender-system">Google Pay Recommender System</h2>
+<p>&#x6211;&#x89C9;&#x5F97;&#x6709;&#x5FC5;&#x8981;&#x63D0;&#x4E00;&#x4E0B;&#x6587;&#x4E2D;&#x63D0;&#x5230;&#x7684;&#x5E94;&#x7528;&#x80CC;&#x666F;---Google Pay&#x3002;</p>
+<p><img src="../images/ctr_3.png" style="zoom:50%;"></p>
+<p>&#x4EE5;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;Google Pay&#x63A8;&#x8350;&#x7CFB;&#x7EDF;&#x7684;&#x7ED3;&#x6784;&#x3002;&#x4E0E;&#x4E00;&#x822C;&#x7684;&#x63A8;&#x8350;&#x7CFB;&#x7EDF;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;Google Pay&#x662F;&#x901A;&#x8FC7;<strong>&#x68C0;&#x7D22;</strong>&#x6765;&#x5B9E;&#x73B0;&#x63A8;&#x8350;&#x7684;<strong>&#x53EC;&#x56DE;</strong>&#xFF0C;&#x5C06;&#x5927;&#x89C4;&#x6A21;&#x7684;App&#x5E94;&#x7528;&#x7F29;&#x5C0F;&#x5230;&#x5C0F;&#x89C4;&#x6A21;&#xFF08;&#x4F8B;&#x5982;100&#xFF09;&#x7684;&#x76F8;&#x5173;&#x5E94;&#x7528;&#x3002;&#x7136;&#x540E;&#x5728;&#x901A;&#x8FC7;&#x7528;&#x6237;&#x7279;&#x5F81;&#x3001;&#x4E0A;&#x4E0B;&#x6587;&#x7279;&#x5F81;&#x3001;&#x7528;&#x6237;&#x884C;&#x4E3A;&#x7279;&#x5F81;&#x7B49;&#x6765;<strong>&#x5EFA;&#x7ACB;&#x63A8;&#x8350;&#x6A21;&#x578B;</strong>&#xFF0C;&#x4F30;&#x8BA1;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x6BCF;&#x4E2A;App&#x7684;&#x6982;&#x7387;&#x5206;&#x6570;&#xFF0C;&#x6309;&#x7167;&#x5206;&#x6570;&#x8FDB;&#x884C;<strong>&#x6392;&#x5E8F;</strong>&#xFF0C;&#x63A8;&#x8350;Top K&#x4E2A;App&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7684;Wide&amp;Deep&#x6A21;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../images/ctr_4.png" style="zoom:50%;"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7279;&#x5F81;&#x5206;&#x4E3A;&#x4E86;&#x8FDE;&#x7EED;&#x578B;&#x7279;&#x5F81;&#x3010;&#x5E74;&#x9F84;&#x3001;&#x5DF2;&#x5B89;&#x88C5;App&#x6570;&#x91CF;&#xFF0C;&#x53C2;&#x4E0E;&#x4F1A;&#x8BDD;&#x6570;&#x91CF;&#x3011;&#x548C;&#x5206;&#x7C7B;&#x7279;&#x5F81;&#x3010;&#x7528;&#x6237;&#x4EBA;&#x53E3;&#x5C5E;&#x6027;&#x7279;&#x5F81;&#x3001;&#x8BBE;&#x5907;&#x7C7B;&#x578B;&#x3001;&#x5DF2;&#x5B89;&#x88C5;App&#x3001;&#x5F53;&#x524D;&#x66DD;&#x5149;App&#x3011;&#x3002;&#x5206;&#x7C7B;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x4E86;Embedding&#x64CD;&#x4F5C;&#xFF0C;&#x6587;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;embedding&#x5411;&#x91CF;&#x7684;&#x9690;&#x85CF;&#x5355;&#x5143;&#x4E3A;32&#x3002;Deep&#x90E8;&#x5206;&#x4F7F;&#x7528;&#x4E86;&#x6240;&#x6709;&#x7684;&#x7279;&#x5F81;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x62FC;&#x63A5;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x4E86;&#x4E09;&#x5C42;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x4E3A;ReLU&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x3002;&#x800C;Wide&#x90E8;&#x5206;&#xFF0C;&#x91C7;&#x7528;&#x4E86;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x5DF2;&#x5B89;&#x88C5;App&#x548C;&#x5F53;&#x524D;&#x66DD;&#x5149;App&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x5408;&#x7279;&#x5F81;&#x7684;&#x610F;&#x56FE;&#x662F;&#x60F3;&#x53D1;&#x73B0;&#x5F53;&#x524D;&#x66DD;&#x5149;app&#x548C;&#x7528;&#x6237;&#x5B89;&#x88C5;app&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x76F4;&#x63A5;&#x5F71;&#x54CD;&#x6700;&#x7EC8;&#x7684;&#x5F97;&#x5206;&#x3002;&#x56E0;&#x6B64;&#x56DE;&#x5230;&#x4E0A;&#x8FF0;&#x5173;&#x4E8E;Wide&#x90E8;&#x5206;&#x4F7F;&#x7528;&#x4E86;&#x5E26;&#x6709;L1&#x6B63;&#x5219;&#x5316;&#x7684;FTRL&#x7684;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x56E0;&#x4E3A;&#x4E24;&#x4E2A;id&#x7C7B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#xFF0C;&#x5728;&#x7EF4;&#x5EA6;&#x7206;&#x70B8;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x4F1A;&#x8BA9;&#x539F;&#x672C;&#x5DF2;&#x7ECF;&#x975E;&#x5E38;&#x7A00;&#x758F;&#x7684;multihot&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x7A00;&#x758F;&#x3002;&#x56E0;&#x6B64;&#x91C7;&#x7528;FTRL&#x8FC7;&#x6EE4;&#x6389;&#x54EA;&#x4E9B;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x662F;&#x975E;&#x5E38;&#x597D;&#x7684;&#x5DE5;&#x7A0B;&#x7ECF;&#x9A8C;&#x3002;&#x6700;&#x540E;&#x518D;&#x5C06;&#x4E24;&#x8005;&#x8FDB;&#x884C;&#x7ED3;&#x5408;&#x3010;&#x8FD9;&#x91CC;&#x96C6;&#x5408;&#x7684;&#x662F;&#x7279;&#x5F81;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E24;&#x90E8;&#x5206;&#x9884;&#x6D4B;&#x7684;&#x6982;&#x7387;&#x503C;&#x3011;&#xFF0C;&#x8F93;&#x5165;&#x5230;&#x4E00;&#x4E2A;Logistic Loss&#x5C42;&#x8FDB;&#x884C;&#x8F93;&#x51FA;&#x3002;</p>
+<h2 id="&#x4EE3;&#x7801;&#x590D;&#x73B0;">&#x4EE3;&#x7801;&#x590D;&#x73B0;</h2>
+<h3 id="tensorflow">Tensorflow</h3>
+<p>Wide&amp;Deep&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;Tensorflow&#x8FDB;&#x884C;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-python">tf.keras.experimental.WideDeepModel(
+    linear_model, dnn_model, activation=<span class="hljs-keyword">None</span>, **kwargs
+)
+</code></pre>
+<pre><code class="lang-python">linear_model = LinearModel()
+dnn_model = keras.Sequential([keras.layers.Dense(units=<span class="hljs-number">64</span>),
+                             keras.layers.Dense(units=<span class="hljs-number">1</span>)])
+combined_model = WideDeepModel(dnn_model, linear_model)
+combined_model.compile(optimizer=[<span class="hljs-string">&apos;sgd&apos;</span>, <span class="hljs-string">&apos;adam&apos;</span>], <span class="hljs-string">&apos;mse&apos;</span>, [<span class="hljs-string">&apos;mse&apos;</span>])
+<span class="hljs-comment"># define dnn_inputs and linear_inputs as separate numpy arrays or</span>
+<span class="hljs-comment"># a single numpy array if dnn_inputs is same as linear_inputs.</span>
+combined_model.fit([dnn_inputs, linear_inputs], y, epochs)
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6A21;&#x578B;&#x9700;&#x8981;&#x7684;&#x7684;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x53C2;&#x6570;&#x4E3A;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x548C;&#x6DF1;&#x5EA6;&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x9650;&#x5236;&#x6A21;&#x578B;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x4E5F;&#x7B26;&#x5408;&#x6587;&#x7AE0;&#x4E00;&#x5F00;&#x5934;&#x8BF4;&#x5230;&#x7684;Wide&amp;Deep&#x662F;&#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x63A8;&#x8350;&#x6A21;&#x578B;&#x67B6;&#x6784;&#x3002;&#x5E76;&#x4E14;&#x6A21;&#x578B;&#x4E2D;Wide&#x90E8;&#x5206;&#x548C;Deep&#x90E8;&#x5206;&#x8BAD;&#x7EC3;&#x7684;&#x4F18;&#x5316;&#x5668;&#x662F;&#x5206;&#x5F00;&#x3002;&#x6211;&#x4EEC;&#x518D;&#x8FDB;&#x4E00;&#x6B65;&#x67E5;&#x770B;WideDeepModel&#x7684;&#x4E3B;&#x8981;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-meta">@keras_export(&apos;keras.experimental.WideDeepModel&apos;)</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WideDeepModel</span><span class="hljs-params">(training.Model)</span>:</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, linear_model, dnn_model, activation=None, **kwargs)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Create a Wide &amp; Deep Model.
+
+    Args:
+      linear_model: a premade LinearModel, its output must match the output of
+        the dnn model.
+      dnn_model: a `tf.keras.Model`, its output must match the output of the
+        linear model.
+      activation: Activation function. Set it to None to maintain a linear
+        activation.
+      **kwargs: The keyword arguments that are passed on to BaseLayer.__init__.
+        Allowed keyword arguments include `name`.
+    &quot;&quot;&quot;</span>
+    super(WideDeepModel, self).__init__(**kwargs)
+    self.linear_model = linear_model
+    self.dnn_model = dnn_model
+    self.activation = activations.get(activation)
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">call</span><span class="hljs-params">(self, inputs)</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> isinstance(inputs, (tuple, list)) <span class="hljs-keyword">or</span> len(inputs) != <span class="hljs-number">2</span>:
+      linear_inputs = dnn_inputs = inputs
+    <span class="hljs-keyword">else</span>:
+      linear_inputs, dnn_inputs = inputs
+    linear_output = self.linear_model(linear_inputs)
+    dnn_output = self.dnn_model(dnn_inputs)
+    output = <span class="hljs-number">.5</span> * (linear_output + dnn_output)
+    <span class="hljs-keyword">if</span> self.activation:
+      <span class="hljs-keyword">return</span> self.activation(output)
+    <span class="hljs-keyword">return</span> output
+</code></pre>
+<p>Wide&#x548C;Deep&#x90E8;&#x5206;&#x7684;&#x8F93;&#x5165;&#x53EF;&#x4EE5;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x91CD;&#x8981;&#x7684;&#x662F;&#x6700;&#x7EC8;&#x7684;&#x8F93;&#x51FA;&#x662F;Wide&#x8F93;&#x51FA;&#x548C;Deep&#x8F93;&#x51FA;&#x7684;&#x5E73;&#x5747;&#x3010;&#x6216;&#x8005;&#x52A0;&#x5165;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3011;&#x3002;&#x8FD9;&#x4E0E;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x6587;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x6A21;&#x578B;&#x6784;&#x9020;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x4E0D;&#x4E00;&#x5B9A;&#x5B8C;&#x5168;&#x6309;&#x7167;&#x8BBA;&#x6587;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;&#x6A21;&#x578B;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x590D;&#x73B0;&#xFF0C;&#x56E0;&#x4E3A;&#x6587;&#x4E2D;&#x662F;&#x57FA;&#x4E8E;&#x5177;&#x4F53;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x8FDB;&#x884C;&#x642D;&#x5EFA;&#x7684;&#xFF0C;&#x66F4;&#x8BE5;&#x5173;&#x6CE8;&#x7684;&#x662F;Wide&#x90E8;&#x5206;&#x548C;Deep&#x90E8;&#x5206;&#x7ED3;&#x5408;&#x7684;&#x601D;&#x60F3;&#x3002;</p>
+<h3 id="&#x81EA;&#x5DF1;&#x590D;&#x73B0;">&#x81EA;&#x5DF1;&#x590D;&#x73B0;</h3>
+<p>&#x7531;&#x4E8E;&#x4E4B;&#x524D;&#x590D;&#x73B0;&#x8FC7;DIN&#x4EE3;&#x7801;&#xFF0C;&#x56E0;&#x6B64;&#x4F7F;&#x7528;&#x4E86;&#x4E0E;&#x5176;&#x540C;&#x7684;&#x63A8;&#x8350;&#x73AF;&#x5883;&#x3010;&#x4E9A;&#x9A6C;&#x900A;&#x7684;&#x7535;&#x5B50;&#x5546;&#x54C1;&#x6570;&#x636E;&#x96C6;&#x3011;&#xFF0C;&#x7B80;&#x5355;&#x8FDB;&#x884C;&#x4E86;&#x590D;&#x73B0;&#x3002;&#x3010;&#x53CD;&#x6B63;&#x80FD;&#x8DD1;&#x8D77;&#x6765;&#x3011;</p>
+<p>github&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/BlackSpaceGZY/Recommended-System" target="_blank">https://github.com/BlackSpaceGZY/Recommended-System</a></p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>Wide&amp;Deep&#x6A21;&#x578B;&#x80FD;&#x591F;&#x53D6;&#x5F97;&#x6210;&#x529F;&#x7684;&#x5173;&#x952E;&#x5728;&#x4E8E;&#xFF1A;</p>
+<ol>
+<li>&#x6293;&#x4F4F;&#x4E86;&#x4E1A;&#x52A1;&#x95EE;&#x9898;&#x7684;&#x672C;&#x8D28;&#x7279;&#x70B9;&#xFF0C;&#x80FD;&#x591F;&#x878D;&#x5408;&#x4F20;&#x7EDF;&#x6A21;&#x578B;&#x7684;&#x8BB0;&#x5FC6;&#x80FD;&#x529B;&#x548C;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x7684;&#x4F18;&#x52BF;&#xFF1B;</li>
+<li>&#x6A21;&#x578B;&#x7B80;&#x5355;&#xFF0C;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x5728;&#x5DE5;&#x7A0B;&#x4E0A;&#x5B9E;&#x73B0;&#x3001;&#x8BAD;&#x7EC3;&#x548C;&#x4E0A;&#x7EBF;&#xFF0C;&#x52A0;&#x901F;&#x4E86;&#x5728;&#x5DE5;&#x4E1A;&#x754C;&#x7684;&#x63A8;&#x5E7F;&#x548C;&#x5E94;&#x7528;&#x3002;</li>
+</ol>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<p>[1] <a href="https://zhuanlan.zhihu.com/p/142958834" target="_blank">&#x89C1;&#x5FAE;&#x77E5;&#x8457;&#xFF0C;&#x4F60;&#x771F;&#x7684;&#x641E;&#x61C2;Google&#x7684;Wide&amp;Deep&#x6A21;&#x578B;&#x4E86;&#x5417;&#xFF1F;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WDL","level":"1.3.1","depth":2,"previous":{"title":"CTR","level":"1.3","depth":1,"ref":"","articles":[{"title":"WDL","level":"1.3.1","depth":2,"path":"CTR/WDL.md","ref":"CTR/WDL.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CTR/WDL.md","mtime":"2020-10-15T02:24:36.851Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-15T15:13:22.843Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
